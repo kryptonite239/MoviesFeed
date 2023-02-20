@@ -367,17 +367,47 @@ img{
         display: none;
     }
     .search{
-        width: 76px;
+        width: 300px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 15px;
+        overflow: hidden;
+        justify-content: flex-end;
     }
     .search img{
         display: block;
         height: 28px;
         width: 28px;
     }
-    
+    .input-area{
+        width: 200px;
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+        overflow: hidden;
+        transition: ease-in-out 0.5s;
+       
+    }
+    @keyframes slide-left {
+        0%{
+            transform: translateX(100px);
+        }
+        50%{
+           transform: translateX(50px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+        
+    }
+    .input-text{
+        animation: slide-left 0.5s ease-out 0s 1;
+    }
+    .input-area:hover .input-text{
+        width: 120px;
+        display: flex;
+    }
     .movie{
         width: 180px;
         height: 300px;
